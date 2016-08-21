@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Admin Columns - Icons Add-on
-Version: 1.0
+Version: 1.1
 Description: Use icons instead of text labels in column headers on post, user, media and other admin pages. Extension for Codepress Admin Columns.
 Author: Jesper van Engelen
 Author URI: http://jespervanengelen.com
@@ -77,6 +77,8 @@ class CPACIC {
 	}
 
 	/**
+	 * Enqueue admin styles and scripts
+	 *
 	 * @since 1.0
 	 */
 	public function admin_scripts() {
@@ -193,6 +195,8 @@ class CPACIC {
 	}
 
 	/**
+	 * Output the HTML for the popup box for selecting a dashicon
+	 *
 	 * @since 1.1
 	 */
 	public function after_columns() {
@@ -250,7 +254,7 @@ class CPACIC {
 			}
 			else if ( $args['label_icon_type'] == 'custom' ) {
 				if ( $args['label_icon_custom_url'] ) {
-					$label = '<img src="' . esc_attr( $column_options['label_icon_custom_url'] ) . '" alt="' . esc_attr( $label ) . '" />';
+					$label = '<img src="' . esc_attr( $args['label_icon_custom_url'] ) . '" alt="' . esc_attr( $label ) . '" />';
 				}
 			}
 			else if ( $args['label_icon_type'] == 'dashicon' ) {
