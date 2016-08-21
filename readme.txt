@@ -7,15 +7,15 @@ Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Use icons instead of text labels in column headers on post, user, media and other admin pages. Extension for Codepress Admin Columns.
+Use icons instead of text labels in column headers on post, user, media and other admin pages. Extension for Admin Columns.
 
 == Description ==
 
 Enhance your admin overview screens by displaying icons instead of text labels in the table header and footer.
 
-The Icons Add-on for Codepress Admin Columns adds functionality for displaying icons on the posts, users, media and comment overview screens, and any other screens Codepress Admin Columns Supports. It supports all column types that have a label! You can choose to select one of WordPress' native [Dashicons](https://developer.wordpress.org/resource/dashicons/), upload a new icon image, select an icon from your media library and choose a custom URL to retrieve the icon from.
+The Icons Add-on for Admin Columns adds functionality for displaying icons on the posts, users, media and comment overview screens, and any other screens Admin Columns Supports. It supports all column types that have a label! You can choose to select one of WordPress' native [Dashicons](https://developer.wordpress.org/resource/dashicons/), upload a new icon image, select an icon from your media library and choose a custom URL to retrieve the icon from.
 
-> This plugin is an add-on for [Codepress Admin Columns](https://wordpress.org/plugins/codepress-admin-columns/).
+> This plugin is an add-on for [Admin Columns](https://wordpress.org/plugins/codepress-admin-columns/).
 
 == Screenshots ==
 

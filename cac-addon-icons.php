@@ -2,7 +2,7 @@
 /*
 Plugin Name: Admin Columns - Icons Add-on
 Version: 1.1
-Description: Use icons instead of text labels in column headers on post, user, media and other admin pages. Extension for Codepress Admin Columns.
+Description: Use icons instead of text labels in column headers on post, user, media and other admin pages. Extension for Admin Columns.
 Author: Jesper van Engelen
 Author URI: http://jespervanengelen.com
 License: GPLv2
