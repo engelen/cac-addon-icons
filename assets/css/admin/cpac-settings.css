@@ -1,0 +1,60 @@
+/*.section.cpacic-label-icon-attachment > a {
+    border: 3px dashed #BBB;
+    padding: 12px;
+    display: block;
+}*/
+
+.cpacic-label-icon-dashicon select {
+	font-family: 'dashicons';
+}
+
+.cpacic-label-icon-dashicon select option {
+	font-family: 'dashicons';
+}
+
+#cpacic-select-icon {
+	display: none;
+}
+
+.cpacic-popup-content .cpacic-dashicon {
+	display: inline-block;
+	padding: 12px;
+	border: 1px solid #ccc;
+	margin-bottom: 4px;
+	margin-right: 0;
+	color: #444;
+	text-decoration: none;
+	outline: none;
+}
+
+.cpacic-popup-content .cpacic-dashicon:active, .cpacic-popup-content .cpacic-dashicon:focus {
+	outline: none;
+}
+
+.cpacic-popup-content .cpacic-dashicon.selected {
+	border: 1px solid #0073aa;
+	background: #ddd;
+}
+
+.cpacic-popup-content .cpacic-dashicon:hover {
+	border-color: #999;
+}
+
+.cpacic-popup-toolbar {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	height: 60px;
+	padding: 0 16px;
+	border-top: 1px solid #ddd;
+	overflow: hidden;
+	box-sizing: border-box;
+	background: #fcfcfc;
+}
+
+.cpacic-popup-toolbar .button {
+	float: right;
+	margin-top: 14px;
+}

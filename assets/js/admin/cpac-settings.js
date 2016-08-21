@@ -3,18 +3,8 @@ jQuery( document ).ready( function( $ ) {
 		var container = $( this ).parents( '.input' );
 		var val = $( this ).val();
 
-		if ( val == 'custom' ) {
-			container.find( '.cpacic-label-icon-custom' ).show();
-			container.find( '.cpacic-label-icon-attachment' ).hide();
-		}
-		else if ( val == 'attachment' ) {
-			container.find( '.cpacic-label-icon-custom' ).hide();
-			container.find( '.cpacic-label-icon-attachment' ).show();
-		}
-		else {
-			container.find( '.cpacic-label-icon-custom' ).hide();
-			container.find( '.cpacic-label-icon-attachment' ).hide();
-		}
+		container.find( '.section' ).hide();
+		container.find( '.cpacic-label-icon-' + val ).show();
 	} );
 
 	$( '.cpacic-label-icon-attachment a' ).click( function( e ) {
@@ -44,12 +34,39 @@ jQuery( document ).ready( function( $ ) {
 					image_url = attachment.sizes.thumbnail.url;
 				}
 
-				container.find( 'input[type="text"]' ).val( attachment.id );
+				container.find( 'input[type="hidden"]' ).val( attachment.id );
 				container.find( '.cpacic-label-icon-attachment .icon-preview' ).html( '<img src="' + image_url + '" />' );
 				container.find( '.no-icon' ).hide();
 			}
 		} );
 
 		uploader.open();
+	} );
+
+	var cpacic_current_column;
+
+	$( '.cpacic-label-icon-dashicon a' ).click( function() {
+		var dashicon_current = $( this ).parent().find( 'input' ).val();
+		console.log(dashicon_current);
+		$( '#cpacic-select-icon .cpacic-dashicon' ).removeClass( 'selected' );
+		$( '#cpacic-select-icon .cpacic-dashicon[data-dashicon="' + dashicon_current + '"]' ).addClass( 'selected' );
+
+		cpacic_current_column = $( this ).parents( '.column-form' );
+	} );
+
+	$( '.cpacic-dashicon' ).click( function( e ) {
+		e.preventDefault();
+
+		var new_icon = $( this ).data( 'dashicon' );
+
+		$( this ).addClass( 'selected' ).siblings().removeClass( 'selected' );
+		cpacic_current_column.find( '.cpacic-label-icon-dashicon input' ).val( new_icon );
+		cpacic_current_column.find( '.cpapic-current-icon div' ).html( '&#x' + new_icon + ';' );
+	} );
+
+	$( '.cpacic-popup-toolbar a' ).click( function( e ) {
+		e.preventDefault();
+
+		$( '#TB_closeWindowButton' ).trigger( 'click' );
 	} );
 } );
